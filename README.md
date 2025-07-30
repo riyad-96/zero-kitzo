@@ -1,6 +1,6 @@
-# zero-kit
+# zero-kitzo
 
-[![npm](https://img.shields.io/npm/v/zero-kit)](https://www.npmjs.com/package/zero-kit)
+[![npm](https://img.shields.io/npm/v/zero-kitzo)](https://www.npmjs.com/package/zero-kitzo)
 
 ### A lightweight tool
 
@@ -14,7 +14,7 @@ Current features
 #### NPM install
 
 ```bash
-npm install zero-kit
+npm install zero-kitzo
 ```
 ***
 #### Button:
@@ -22,13 +22,13 @@ npm install zero-kit
 
 | [NPM](#button-npm-usage) | [CDN](#use-button-via-cdn) |
 | -------- | -------- |
-| `zeroCopy()` | `kit.zeroCopy()` |
-| `zeroTooltip()` | `kit.zeroTooltip()` |
-| `zeroRipple()` | `kit.zeroRipple()` |
+| `zeroCopy()` | `kitzo.zeroCopy()` |
+| `zeroTooltip()` | `kitzo.zeroTooltip()` |
+| `zeroRipple()` | `kitzo.zeroRipple()` |
 ##### Button NPM usage
 
 ```javascript
-import { zeroCopy, zeroTooltip, zeroRipple } from 'zero-kit/button';
+import { zeroCopy, zeroTooltip, zeroRipple } from 'zero-kitzo/button';
 ```
 
 > Use a modern build tool. **vite** - recommended
@@ -76,21 +76,21 @@ zeroRipple(selectors | element | NodeList, {
 
 ##### CDN usage
 ```javascript
-kit.zeroCopy();
-kit.zeroTooltip();
-kit.zeroRipple();
+kitzo.zeroCopy();
+kitzo.zeroTooltip();
+kitzo.zeroRipple();
 ```
 
 ##### zeroCopy API:
 
 ```javascript
-kit.zeroCopy(selectors | element, 'texts');
+kitzo.zeroCopy(selectors | element, 'texts');
 ```
 
 ##### zeroTooltip API:
 
 ```javascript
-kit.zeroTooltip(selectors | element | NodeList, {
+kitzo.zeroTooltip(selectors | element | NodeList, {
   tooltip: string,
   direction: 'top' | 'right' | 'bottom' | 'left',
   arrow: 'on' | 'off',
@@ -103,7 +103,7 @@ kit.zeroTooltip(selectors | element | NodeList, {
 ##### zeroRipple API:
 
 ```javascript
-kit.zeroRipple(selectors | element | NodeList, {
+kitzo.zeroRipple(selectors | element | NodeList, {
   opacity: number,
   duration: number,
   color: string,
