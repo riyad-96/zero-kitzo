@@ -3,6 +3,7 @@
   "version": "1.0.10",
   "description": "A lightweight JavaScript UI micro-library.",
   "type": "module",
+  "main": "./dist/zero-kitzo.umd.js",
   "exports": {
     ".": {
       "import": "./dist/zero-kitzo.esm.js",
