@@ -10,7 +10,7 @@
       "types": "./dist/button/button.d.ts"
     },
     "./kitzoBtn": {
-      "types": "./dist/button/button.d.ts"
+      "types": "./dist/button/global.d.ts"
     }
   },
   "files": [

@@ -1,4 +1,3 @@
-export as namespace kitzoBtn;
 export function zeroTooltip(
   element: string | Element | NodeListOf<Element> | HTMLCollection,
   config?: {
