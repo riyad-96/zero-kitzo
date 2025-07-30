@@ -28,7 +28,7 @@ npm install zero-kitzo
 ##### Button NPM usage
 
 ```javascript
-import { zeroCopy, zeroTooltip, zeroRipple } from 'zero-kitzo/button';
+import { zeroCopy, zeroTooltip, zeroRipple } from 'zero-kitzo';
 ```
 
 > Use a modern build tool. **vite** - recommended
@@ -70,7 +70,7 @@ zeroRipple(selectors | element | NodeList, {
 
 ##### Use Button via cdn
 ```html
-<script src="https://cdn.jsdelivr.net/npm/zero-kitzo@1.0.10/dist/zero-kitzo.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/zero-kitzo@1.0.12/dist/zero-kitzo.umd.min.js"></script>
 ```
 > Attach this script tag in the html head tag and you are good to go.
 
