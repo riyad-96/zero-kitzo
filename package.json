@@ -6,11 +6,13 @@
   "exports": {
     "./button": {
       "import": "./dist/button/button.esm.js",
-      "require": "./dist/button/button.umd.js"
+      "require": "./dist/button/button.umd.js",
+      "types": "./dist/button/button.d.ts"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "./dist/button/button.d.ts"
   ],
   "scripts": {
     "dev": "vite",
