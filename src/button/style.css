@@ -1,0 +1,119 @@
+/* ! Tooltip styles */
+/* :root {
+  --tooltip-bg-clr: hsl(0, 0%, 10%);
+  --tooltip-text-clr: hsl(0, 0%, 90%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tooltip-bg-clr: hsl(0, 0%, 95%);
+    --tooltip-text-clr: hsl(0, 0%, 10%);
+  }
+}
+
+.zero-tooltip {
+  --tooltip-arrow-clr: var(--tooltip-bg-clr);
+
+  box-sizing: border-box;
+  font-family: inherit;
+  text-align: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+
+  background-color: var(--tooltip-bg-clr);
+  color: var(--tooltip-text-clr);
+  padding-block: 0.325rem;
+  padding-inline: 0.625rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px hsla(235, 0%, 0%, 0.25);
+
+  opacity: 0 !important;
+
+  transition: opacity 200ms;
+  transition-delay: 100ms;
+  pointer-events: none;
+}
+
+.zero-tooltip.show {
+  opacity: 1 !important;
+}
+
+.zero-tooltip-top::before,
+.zero-tooltip-right::before,
+.zero-tooltip-bottom::before,
+.zero-tooltip-left::before {
+  content: '';
+  position: absolute;
+  border: 6px solid;
+}
+
+.zero-tooltip-top::before {
+  top: calc(100% - 1px);
+  left: 50%;
+  translate: -50% 0;
+  border-color: var(--tooltip-arrow-clr) transparent transparent transparent;
+}
+
+.zero-tooltip-right::before {
+  top: 50%;
+  right: calc(100% - 1px);
+  translate: 0 -50%;
+  border-color: transparent var(--tooltip-arrow-clr) transparent transparent;
+}
+
+.zero-tooltip-bottom::before {
+  bottom: calc(100% - 1px);
+  left: 50%;
+  translate: -50% 0;
+  border-color: transparent transparent var(--tooltip-arrow-clr) transparent;
+}
+
+.zero-tooltip-left::before {
+  left: calc(100% - 1px);
+  top: 50%;
+  translate: 0 -50%;
+  border-color: transparent transparent transparent var(--tooltip-arrow-clr);
+} */
+
+/* ! Ripple styles */
+/* .zero-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.zero-ripples {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: var(--ripples-color);
+  z-index: 5;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.zero-ripples.expand {
+  animation: expand-ripple var(--ripples-duration) linear forwards;
+}
+
+@keyframes expand-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: var(--ripples-opacity);
+  }
+  100% {
+    width: var(--ripples-size);
+    height: var(--ripples-size);
+    opacity: 0;
+  }
+} */
+
+/* zero-util */

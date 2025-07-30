@@ -1,0 +1,42 @@
+{
+  "name": "zero-kitzo",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript UI micro-library.",
+  "type": "module",
+  "exports": {
+    "./button": {
+      "import": "./dist/button/button.esm.js",
+      "require": "./dist/button/button.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "rollup -c",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "tooltip",
+    "ripple",
+    "copy-button",
+    "micro-library",
+    "modular",
+    "ui",
+    "javascript",
+    "zero-lib"
+  ],
+  "author": "Riyad",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riyad-96/zero-kit"
+  },
+  "homepage": "https://github.com/riyad-96/zero-kit#readme",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.46.2",
+    "vite": "^7.0.4"
+  }
+}
