@@ -179,7 +179,6 @@ export default function zeroTooltip(element, config = {}) {
         });
 
         const isArrowOn = arrow === 'on';
-        console.log(isArrowOn);
         tooltipDiv.className = `zero-tooltip ${isArrowOn ? `zero-tooltip-${direction}` : ''} ${customClass.trim() ? customClass : ''}`;
         tooltipDiv.textContent = tooltip;
 
