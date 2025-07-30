@@ -31,9 +31,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/riyad-96/zero-kit"
+    "url": "https://github.com/riyad-96/zero-kitzo"
   },
-  "homepage": "https://github.com/riyad-96/zero-kit#readme",
+  "homepage": "https://github.com/riyad-96/zero-kitzo#readme",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.46.2",
