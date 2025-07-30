@@ -427,4 +427,9 @@
   exports.zeroRipple = zeroRipple;
   exports.zeroTooltip = zeroTooltip;
 
+  window.zeroKitzo = {
+    zeroTooltip,
+    zeroRipple,
+    zeroCopy,
+  };
 }));

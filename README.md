@@ -81,6 +81,11 @@ kitzoBtn.zeroTooltip();
 kitzoBtn.zeroRipple();
 ```
 
+```javascript
+/// <reference types="zero-kitzo/kitzoBtn" />
+``` 
+> Add this line at the top of your JS file to get code suggestions.
+
 ##### zeroCopy API:
 
 ```javascript

@@ -8,11 +8,13 @@
       "import": "./dist/button/button.esm.js",
       "require": "./dist/button/button.umd.js",
       "types": "./dist/button/button.d.ts"
+    },
+    "./kitzoBtn": {
+      "types": "./dist/button/button.d.ts"
     }
   },
   "files": [
-    "dist",
-    "./dist/button/button.d.ts"
+    "dist"
   ],
   "scripts": {
     "dev": "vite",
