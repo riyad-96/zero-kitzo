@@ -70,7 +70,7 @@ zeroRipple(selectors | element | NodeList, {
 
 ##### Use Button via cdn
 ```html
-<script src="https://cdn.jsdelivr.net/npm/zero-kitzo@1.0.9/dist/button/button.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/zero-kitzo@1.0.10/dist/zero-kitzo.umd.js"></script>
 ```
 > Attach this script tag in the html head tag and you are good to go.
 
