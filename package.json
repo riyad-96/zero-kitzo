@@ -1,6 +1,6 @@
 {
   "name": "zero-kitzo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight JavaScript UI micro-library.",
   "type": "module",
   "exports": {
