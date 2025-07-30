@@ -4,13 +4,10 @@
   "description": "A lightweight JavaScript UI micro-library.",
   "type": "module",
   "exports": {
-    "./button": {
-      "import": "./dist/button/button.esm.js",
-      "require": "./dist/button/button.umd.js",
-      "types": "./dist/button/button.d.ts"
-    },
-    "./kitzoBtn": {
-      "types": "./dist/button/global.d.ts"
+    ".": {
+      "import": "./dist/zero-kitzo.esm.js",
+      "require": "./dist/zero-kitzo.umd.js",
+      "types": "./dist/zero-kitzo.d.ts"
     }
   },
   "files": [

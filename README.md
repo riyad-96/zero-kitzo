@@ -22,9 +22,9 @@ npm install zero-kitzo
 
 | [NPM](#button-npm-usage) | [CDN](#use-button-via-cdn) |
 | -------- | -------- |
-| `zeroCopy()` | `kitzoBtn.zeroCopy()` |
-| `zeroTooltip()` | `kitzoBtn.zeroTooltip()` |
-| `zeroRipple()` | `kitzoBtn.zeroRipple()` |
+| `zeroCopy()` | `kitzo.zeroCopy()` |
+| `zeroTooltip()` | `kitzo.zeroTooltip()` |
+| `zeroRipple()` | `kitzo.zeroRipple()` |
 ##### Button NPM usage
 
 ```javascript
@@ -76,26 +76,21 @@ zeroRipple(selectors | element | NodeList, {
 
 ##### CDN usage
 ```javascript
-kitzoBtn.zeroCopy();
-kitzoBtn.zeroTooltip();
-kitzoBtn.zeroRipple();
+kitzo.zeroCopy();
+kitzo.zeroTooltip();
+kitzo.zeroRipple();
 ```
-
-```javascript
-/// <reference types="zero-kitzo/kitzoBtn" />
-``` 
-> Add this line at the top of your JS file to get code suggestions.
 
 ##### zeroCopy API:
 
 ```javascript
-kitzoBtn.zeroCopy(selectors | element, 'texts');
+kitzo.zeroCopy(selectors | element, 'texts');
 ```
 
 ##### zeroTooltip API:
 
 ```javascript
-kitzoBtn.zeroTooltip(selectors | element | NodeList, {
+kitzo.zeroTooltip(selectors | element | NodeList, {
   tooltip: string,
   direction: 'top' | 'right' | 'bottom' | 'left',
   arrow: 'on' | 'off',
@@ -108,7 +103,7 @@ kitzoBtn.zeroTooltip(selectors | element | NodeList, {
 ##### zeroRipple API:
 
 ```javascript
-kitzoBtn.zeroRipple(selectors | element | NodeList, {
+kitzo.zeroRipple(selectors | element | NodeList, {
   opacity: number,
   duration: number,
   color: string,

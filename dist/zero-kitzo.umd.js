@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.kitzoBtn = {}));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.kitzo = {}));
 })(this, (function (exports) { 'use strict';
 
   //! Helper functions
@@ -427,9 +427,4 @@
   exports.zeroRipple = zeroRipple;
   exports.zeroTooltip = zeroTooltip;
 
-  window.zeroKitzo = {
-    zeroTooltip,
-    zeroRipple,
-    zeroCopy,
-  };
 }));
