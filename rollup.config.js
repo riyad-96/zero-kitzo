@@ -1,5 +1,9 @@
 const features = ['button'];
 
+function getGlobarVariable(feature) {
+  if(feature === 'button') return 'Btn'
+}
+
 export default features.flatMap(feature => {
   const input = `src/${feature}/index.js`;
   const outputBase = `dist/${feature}/${feature}`;
@@ -10,7 +14,7 @@ export default features.flatMap(feature => {
       output: {
         file: `${outputBase}.umd.js`,
         format: 'umd',
-        name: 'kitzo'
+        name: `kitzo${getGlobarVariable(feature)}`
       }
     },
     {

@@ -22,9 +22,9 @@ npm install zero-kitzo
 
 | [NPM](#button-npm-usage) | [CDN](#use-button-via-cdn) |
 | -------- | -------- |
-| `zeroCopy()` | `kitzo.zeroCopy()` |
-| `zeroTooltip()` | `kitzo.zeroTooltip()` |
-| `zeroRipple()` | `kitzo.zeroRipple()` |
+| `zeroCopy()` | `kitzoBtn.zeroCopy()` |
+| `zeroTooltip()` | `kitzoBtn.zeroTooltip()` |
+| `zeroRipple()` | `kitzoBtn.zeroRipple()` |
 ##### Button NPM usage
 
 ```javascript
@@ -70,27 +70,28 @@ zeroRipple(selectors | element | NodeList, {
 
 ##### Use Button via cdn
 ```html
--
+<script src="https://cdn.jsdelivr.net/npm/zero-kitzo@1.0.2/dist/button/button.umd.js"></script>
+
 ```
 > Attach this script tag in the html head tag and you are good to go.
 
 ##### CDN usage
 ```javascript
-kitzo.zeroCopy();
-kitzo.zeroTooltip();
-kitzo.zeroRipple();
+kitzoBtn.zeroCopy();
+kitzoBtn.zeroTooltip();
+kitzoBtn.zeroRipple();
 ```
 
 ##### zeroCopy API:
 
 ```javascript
-kitzo.zeroCopy(selectors | element, 'texts');
+kitzoBtn.zeroCopy(selectors | element, 'texts');
 ```
 
 ##### zeroTooltip API:
 
 ```javascript
-kitzo.zeroTooltip(selectors | element | NodeList, {
+kitzoBtn.zeroTooltip(selectors | element | NodeList, {
   tooltip: string,
   direction: 'top' | 'right' | 'bottom' | 'left',
   arrow: 'on' | 'off',
@@ -103,7 +104,7 @@ kitzo.zeroTooltip(selectors | element | NodeList, {
 ##### zeroRipple API:
 
 ```javascript
-kitzo.zeroRipple(selectors | element | NodeList, {
+kitzoBtn.zeroRipple(selectors | element | NodeList, {
   opacity: number,
   duration: number,
   color: string,
