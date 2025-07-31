@@ -5,26 +5,30 @@
 ### A lightweight tool
 
 Current features
+
 - Button:
   - Copy on click
   - Tooltip on mouseover
   - Ripple effect on mousedown
-
 
 #### NPM install
 
 ```bash
 npm install zero-kitzo
 ```
-***
+
+---
+
 #### Button:
+
 ##### Quick usage overview
 
 | [NPM](#button-npm-usage) | [CDN](#use-button-via-cdn) |
-| -------- | -------- |
-| `zeroCopy()` | `kitzo.zeroCopy()` |
-| `zeroTooltip()` | `kitzo.zeroTooltip()` |
-| `zeroRipple()` | `kitzo.zeroRipple()` |
+| ------------------------ | -------------------------- |
+| `zeroCopy()`             | `kitzo.zeroCopy()`         |
+| `zeroTooltip()`          | `kitzo.zeroTooltip()`      |
+| `zeroRipple()`           | `kitzo.zeroRipple()`       |
+
 ##### Button NPM usage
 
 ```javascript
@@ -36,8 +40,12 @@ import { zeroCopy, zeroTooltip, zeroRipple } from 'zero-kitzo';
 ##### zeroCopy API:
 
 ```javascript
-zeroCopy(selector | element, 'text');
+zeroCopy(selector | element, {
+  doc: string,
+  event: 'click' | 'dblclick' | 'contextmenu' | 'mouseup' | 'touchend',
+});
 ```
+
 > Instantly adds click-to-copy functionality to buttons, reliably and with fallback.
 
 ##### zeroTooltip API:
@@ -49,9 +57,10 @@ zeroTooltip(selectors | element | NodeList, {
   arrow: 'on' | 'off',
   offset: number,
   customClass: string,
-  style: {}
+  style: {},
 });
 ```
+
 > Attach minimal tooltips to buttons for clean, helpful hover hints.
 
 ##### zeroRipple API:
@@ -64,17 +73,21 @@ zeroRipple(selectors | element | NodeList, {
   size: number | null,
 });
 ```
+
 > Adds a lightweight, clean ripple effect to your buttons on click.
 
 ---
 
 ##### Use Button via cdn
+
 ```html
-<script src="https://cdn.jsdelivr.net/npm/zero-kitzo@1.0.12/dist/zero-kitzo.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/zero-kitzo@1.0.13/dist/zero-kitzo.umd.min.js"></script>
 ```
+
 > Attach this script tag in the html head tag and you are good to go.
 
 ##### CDN usage
+
 ```javascript
 kitzo.zeroCopy();
 kitzo.zeroTooltip();
@@ -84,7 +97,10 @@ kitzo.zeroRipple();
 ##### zeroCopy API:
 
 ```javascript
-kitzo.zeroCopy(selectors | element, 'texts');
+kitzo.zeroCopy(selectors | element, {
+  doc: string,
+  event: 'click' | 'dblclick' | 'contextmenu' | 'mouseup' | 'touchend',
+});
 ```
 
 ##### zeroTooltip API:
@@ -96,7 +112,7 @@ kitzo.zeroTooltip(selectors | element | NodeList, {
   arrow: 'on' | 'off',
   offset: number,
   customClass: string,
-  style: {}
+  style: {},
 });
 ```
 

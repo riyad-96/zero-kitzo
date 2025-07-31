@@ -1,4 +1,4 @@
-import { getButtons } from "./helper";
+import { getButtons } from './helper';
 
 //! Copy function
 const clipboardList = [];
@@ -31,19 +31,43 @@ async function copyText(docs) {
   }
 }
 
-export default function zeroCopy(element, docs) {
+const copyConfigMap = new WeakMap();
+const allowedEvents = ['click', 'dblclick', 'contextmenu', 'mouseup', 'touchend'];
+const attachedEvents = new Set();
+
+export default function zeroCopy(element, config = {}) {
+  config = Object.assign(
+    {
+      doc: '',
+      event: 'click',
+    },
+    config
+  );
+
+  const { doc, event } = config;
+
   if (!element) {
     console.error('A button element/selector is expected');
     return;
   }
 
-  if (!docs) {
-    console.error('Copy parameter cannot be empty');
+  if (!doc) {
+    console.error('doc cannot be empty');
     return;
   }
 
-  if (typeof docs !== 'string') {
+  if (typeof doc !== 'string') {
     console.error('Doc should be in string format');
+    return;
+  }
+
+  if (typeof event !== 'string') {
+    console.error('Only strings are allowed as events');
+    return;
+  }
+
+  if (!event.trim()) {
+    console.error('event cannot be empty');
     return;
   }
 
@@ -53,31 +77,31 @@ export default function zeroCopy(element, docs) {
     return;
   }
 
-  const randomId = crypto.randomUUID();
-  const id = randomId.replaceAll('-', '');
+  if (!allowedEvents.includes(event)) {
+    console.warn(`[zeroCopy] "${event}" is not allowed. Defaulting to "click".`);
+  }
+
+  const safeEvent = allowedEvents.includes(event) ? event : 'click';
 
   allButtons.forEach((btn) => {
-    btn.classList.add('zero-copy');
-    btn.setAttribute('data-zero-copy', id);
+    btn.setAttribute('data-zero-copy', 'true');
 
-    clipboardList.push({
-      id,
-      docs,
+    copyConfigMap.set(btn, {
+      doc,
+      event: safeEvent,
     });
   });
 
-  if (!copyListenerAdded) {
-    document.addEventListener('click', (e) => {
-      const copyBtn = e.target.closest('[data-zero-copy]');
-      if (copyBtn) {
-        const btnId = copyBtn.dataset.zeroCopy;
-        const copyEl = clipboardList.find((el) => btnId === el.id);
-        if (copyEl) {
-          copyText(copyEl.docs);
-        }
+  if (!attachedEvents.has(safeEvent)) {
+    document.addEventListener(safeEvent, (e) => {
+      const btn = e.target.closest('[data-zero-copy]');
+      if (!btn) return;
+
+      const { doc, event } = copyConfigMap.get(btn);
+      if (event && event === safeEvent) {
+        copyText(doc);
       }
     });
-
-    copyListenerAdded = true;
+    attachedEvents.add(safeEvent);
   }
 }

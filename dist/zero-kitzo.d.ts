@@ -55,4 +55,25 @@ export function zeroRipple(
   }
 ): void;
 
-export function zeroCopy(element: string | Element | NodeListOf<Element>, docs: string): void;
+export function zeroCopy(
+  element: string | Element | NodeListOf<Element>,
+  config: {
+    /**
+     * The text to be copied to the clipboard.
+     * Must be a non-empty string.
+     */
+    doc?: string;
+
+    /**
+     * The DOM event that triggers the copy action.
+     * Only the following events are allowed:
+     * - 'click' (default)
+     * - 'dblclick'
+     * - 'contextmenu'
+     * - 'mouseup'
+     * - 'touchend'
+     */
+    event?: 'click' | 'dblclick' | 'contextmenu' | 'mouseup' | 'touchend';
+  }
+): void;
+
